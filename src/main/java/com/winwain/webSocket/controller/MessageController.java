@@ -11,7 +11,7 @@ import java.util.Date;
 @Controller
 public class MessageController {
     @MessageMapping("/chatting")
-    @SendTo("/topic/messages")
+    @SendTo("/topic/messages") //@SendTo()广播消息到前端监听/topic/message的地方
     public OutputMessage send(Message message) throws Exception {
         String time = new SimpleDateFormat("HH:mm").format(new Date());
         return new OutputMessage(message.getFrom(), message.getText(), time);
