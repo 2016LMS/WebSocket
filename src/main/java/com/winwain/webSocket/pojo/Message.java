@@ -1,5 +1,5 @@
 package com.winwain.webSocket.pojo;
-
+//@data
 public class Message {
 
     private String from;
